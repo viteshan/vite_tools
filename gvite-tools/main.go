@@ -12,12 +12,19 @@ import (
 	"github.com/vitelabs/go-vite/client"
 	"github.com/vitelabs/go-vite/common/types"
 	comm "github.com/viteshan/gvite-tools/common"
+	tools_dex "github.com/viteshan/gvite-tools/dex"
 )
 
 func main() {
 	app := &cli.App{
 		Usage: "vite tools",
 		Commands: []*cli.Command{
+			{
+				Name:   "configMine",
+				Usage:  "configMine",
+				Action: tools_dex.ConfigMineAction,
+				Flags:  append(senderFlags, tools_dex.ConfigMineFlags...),
+			},
 			{
 				Name:   "batchSend",
 				Usage:  "batch send with csv file",
@@ -244,4 +251,24 @@ func readCsv(targetFile string) ([]*comm.SimpleRequestTx, error) {
 		result = append(result, a)
 	}
 	return result, nil
+}
+
+var senderFlags = []cli.Flag{
+	&cli.StringFlag{
+		Name:  "rpcUrl",
+		Value: "https://node.vite.net/gvite",
+	},
+	&cli.StringFlag{
+		Name:     "mnemonic",
+		Usage:    "mnemonic for the sender",
+		FilePath: "vite.mnemonic",
+	},
+	&cli.StringFlag{
+		Name:     "privateKey",
+		Usage:    "private key for the sender",
+		FilePath: "vite.key",
+	},
+	&cli.StringFlag{
+		Name: "fromAddr",
+	},
 }
