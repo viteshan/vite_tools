@@ -34,16 +34,16 @@ var ConfigMineFlags = []cli.Flag{
 var viteTokenId = types.TokenTypeId{'V', 'I', 'T', 'E', ' ', 'T', 'O', 'K', 'E', 'N'}
 
 func ConfigMineAction(c *cli.Context) error {
+	data, err := configMine(c.String("tradeToken"), c.String("quoteToken"), c.Bool("enable"))
+
+	if err != nil {
+		return err
+	}
 	sender, err := comm.NewSenderFromCli(c)
 	if err != nil {
 		return err
 	}
 	toAddress, err := types.HexToAddress(c.String("toAddress"))
-	if err != nil {
-		return err
-	}
-	data, err := configMine(c.String("tradeToken"), c.String("quoteToken"), c.Bool("enable"))
-
 	if err != nil {
 		return err
 	}
@@ -63,6 +63,7 @@ func ConfigMineAction(c *cli.Context) error {
 }
 
 func configMine(tradeToken, quoteToken string, enable bool) ([]byte, error) {
+	fmt.Println(tradeToken, quoteToken, enable)
 	tt, err := types.HexToTokenTypeId(tradeToken)
 	if err != nil {
 		return nil, err

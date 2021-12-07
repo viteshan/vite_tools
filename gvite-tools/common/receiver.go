@@ -14,18 +14,18 @@ import (
 )
 
 func NewReceiver(rpc client.RpcClient, self types.Address, key *derivation.Key) (*Receiver, error) {
-	cli, err := client.NewClient(rpc)
+	sender, err := NewSender(rpc, self, key)
 	if err != nil {
 		return nil, err
 	}
-	return &Receiver{Rpc: rpc, Cli: cli, Self: self, key: key}, nil
+	return &Receiver{Sender: sender}, nil
+}
+func NewReceiverFromSender(sender *Sender) (*Receiver, error) {
+	return &Receiver{Sender: sender}, nil
 }
 
 type Receiver struct {
-	Rpc  client.RpcClient
-	Cli  client.Client
-	Self types.Address
-	key  *derivation.Key
+	*Sender
 }
 
 func (s Receiver) Receive(params client.ResponseTxParams, prev *ledger.HashHeight) (*ledger.HashHeight, error) {
@@ -37,7 +37,7 @@ func (s Receiver) Receive(params client.ResponseTxParams, prev *ledger.HashHeigh
 		return nil, err
 	}
 
-	err = s.Cli.SignDataWithPriKey(s.key, block)
+	err = s.Cli.SignDataWithEd25519Key(s.key, block)
 	if err != nil {
 		return nil, err
 	}

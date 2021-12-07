@@ -112,7 +112,7 @@ func (s Sender) BatchSend(logs []*SimpleRequestTx, prev *core.HashHeight) ([]*co
 
 func NewSenderFromCli(c *cli.Context) (*Sender, error) {
 	url := c.String("rpcUrl")
-	fromAddrS := c.String("fromAddr")
+	fromAddrS := c.String("accountAddress")
 	mnemonic := strings.TrimSpace(c.String("mnemonic"))
 	privateKey := strings.TrimSpace(c.String("privateKey"))
 
