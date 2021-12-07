@@ -39,8 +39,9 @@ func main() {
 
 var senderFlags = []cli.Flag{
 	&cli.StringFlag{
-		Name:  "rpcUrl",
-		Value: "https://node.vite.net/gvite",
+		Name:    "rpcUrl",
+		Aliases: []string{"rpc"},
+		Value:   "https://node.vite.net/gvite",
 	},
 	&cli.StringFlag{
 		Name:     "mnemonic",
