@@ -17,8 +17,7 @@ func main() {
 				Usage:  "configMine",
 				Action: tools_dex.ConfigMineAction,
 				Flags:  append(append([]cli.Flag(nil), senderFlags...), tools_dex.ConfigMineFlags...),
-			},
-			{
+			}, {
 				Name:   "batchSend",
 				Usage:  "batch send with csv file",
 				Action: batchSend,
@@ -50,10 +49,12 @@ var senderFlags = []cli.Flag{
 	},
 	&cli.StringFlag{
 		Name:     "privateKey",
+		Aliases:  []string{"key", "private"},
 		Usage:    "private key for the sender",
 		FilePath: "vite.key",
 	},
 	&cli.StringFlag{
-		Name: "accountAddress",
+		Name:    "accountAddress",
+		Aliases: []string{"address", "addr", "account"},
 	},
 }

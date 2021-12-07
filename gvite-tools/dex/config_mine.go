@@ -22,8 +22,7 @@ var ConfigMineFlags = []cli.Flag{
 		Required: true,
 	},
 	&cli.BoolFlag{
-		Name:     "enable",
-		Required: true,
+		Name: "enable",
 	},
 	&cli.StringFlag{
 		Name:  "toAddress",
