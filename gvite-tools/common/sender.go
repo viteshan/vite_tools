@@ -6,15 +6,15 @@ import (
 	"strings"
 	"time"
 
-	"github.com/vitelabs/go-vite/crypto/ed25519"
+	"github.com/vitelabs/go-vite/v2/crypto/ed25519"
 
 	"github.com/urfave/cli/v2"
-	"github.com/vitelabs/go-vite/log15"
+	"github.com/vitelabs/go-vite/v2/log15"
 
-	"github.com/vitelabs/go-vite/client"
-	"github.com/vitelabs/go-vite/common/types"
-	"github.com/vitelabs/go-vite/interfaces/core"
-	"github.com/vitelabs/go-vite/wallet/hd-bip/derivation"
+	"github.com/vitelabs/go-vite/v2/client"
+	"github.com/vitelabs/go-vite/v2/common/types"
+	"github.com/vitelabs/go-vite/v2/interfaces/core"
+	"github.com/vitelabs/go-vite/v2/wallet/hd-bip/derivation"
 )
 
 func NewSender(rpc client.RpcClient, self types.Address, key *derivation.Key) (*Sender, error) {

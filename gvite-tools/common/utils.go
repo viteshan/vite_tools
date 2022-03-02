@@ -5,11 +5,11 @@ import (
 
 	"github.com/go-errors/errors"
 	bip39 "github.com/tyler-smith/go-bip39"
-	"github.com/vitelabs/go-vite/common/types"
-	ledger "github.com/vitelabs/go-vite/interfaces/core"
-	"github.com/vitelabs/go-vite/rpcapi/api"
-	"github.com/vitelabs/go-vite/wallet/entropystore"
-	"github.com/vitelabs/go-vite/wallet/hd-bip/derivation"
+	"github.com/vitelabs/go-vite/v2/common/types"
+	ledger "github.com/vitelabs/go-vite/v2/interfaces/core"
+	"github.com/vitelabs/go-vite/v2/rpcapi/api"
+	"github.com/vitelabs/go-vite/v2/wallet/entropystore"
+	"github.com/vitelabs/go-vite/v2/wallet/hd-bip/derivation"
 )
 
 func BlockToHashHeight(block *api.AccountBlock) (*ledger.HashHeight, error) {

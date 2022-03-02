@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"sync"
 
-	"github.com/vitelabs/go-vite/client"
+	"github.com/vitelabs/go-vite/v2/client"
 )
 
 var globalCli client.RpcClient

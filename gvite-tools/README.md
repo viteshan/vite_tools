@@ -1,11 +1,5 @@
-git clone https://github.com/vitelabs/go-vite.git
-
-git checkout [latest release tag]
-
-edit go.mod, replace go-vite
-
 ```
-go build -i -o vitetools main.go
+go build -i -o vitetools *.go
 
 
 edit vite.mnemonic

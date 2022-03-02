@@ -6,11 +6,11 @@ import (
 
 	"github.com/go-errors/errors"
 
-	"github.com/vitelabs/go-vite/client"
-	"github.com/vitelabs/go-vite/common/types"
-	ledger "github.com/vitelabs/go-vite/interfaces/core"
-	"github.com/vitelabs/go-vite/log15"
-	"github.com/vitelabs/go-vite/wallet/hd-bip/derivation"
+	"github.com/vitelabs/go-vite/v2/client"
+	"github.com/vitelabs/go-vite/v2/common/types"
+	ledger "github.com/vitelabs/go-vite/v2/interfaces/core"
+	"github.com/vitelabs/go-vite/v2/log15"
+	"github.com/vitelabs/go-vite/v2/wallet/hd-bip/derivation"
 )
 
 func NewReceiver(rpc client.RpcClient, self types.Address, key *derivation.Key) (*Receiver, error) {

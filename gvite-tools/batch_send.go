@@ -7,7 +7,7 @@ import (
 	"os"
 
 	"github.com/urfave/cli/v2"
-	"github.com/vitelabs/go-vite/common/types"
+	"github.com/vitelabs/go-vite/v2/common/types"
 	comm "github.com/viteshan/gvite-tools/common"
 )
 

@@ -5,10 +5,10 @@ import (
 	"math/big"
 
 	"github.com/urfave/cli/v2"
-	"github.com/vitelabs/go-vite/client"
-	"github.com/vitelabs/go-vite/common/types"
-	"github.com/vitelabs/go-vite/vm/contracts/abi"
-	"github.com/vitelabs/go-vite/vm/contracts/dex"
+	"github.com/vitelabs/go-vite/v2/client"
+	"github.com/vitelabs/go-vite/v2/common/types"
+	"github.com/vitelabs/go-vite/v2/vm/contracts/abi"
+	"github.com/vitelabs/go-vite/v2/vm/contracts/dex"
 	comm "github.com/viteshan/gvite-tools/common"
 )
 

@@ -4,7 +4,7 @@ import (
 	"fmt"
 
 	"github.com/urfave/cli/v2"
-	"github.com/vitelabs/go-vite/client"
+	"github.com/vitelabs/go-vite/v2/client"
 	comm "github.com/viteshan/gvite-tools/common"
 )
 
