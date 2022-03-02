@@ -5,7 +5,7 @@ import (
 	"os"
 
 	"github.com/urfave/cli/v2"
-	tools_dex "github.com/viteshan/gvite-tools/dex"
+	tools_dex "github.com/viteshan/vite_tools/gvite-tools/dex"
 )
 
 func main() {

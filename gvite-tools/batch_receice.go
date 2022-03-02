@@ -5,7 +5,7 @@ import (
 
 	"github.com/urfave/cli/v2"
 	"github.com/vitelabs/go-vite/v2/client"
-	comm "github.com/viteshan/gvite-tools/common"
+	comm "github.com/viteshan/vite_tools/gvite-tools/common"
 )
 
 func autoReceive(c *cli.Context) error {

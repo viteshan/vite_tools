@@ -1,4 +1,4 @@
-module github.com/viteshan/gvite-tools
+module github.com/viteshan/vite_tools/gvite-tools
 
 go 1.15
 

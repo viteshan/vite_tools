@@ -9,7 +9,7 @@ import (
 	"github.com/vitelabs/go-vite/v2/common/types"
 	"github.com/vitelabs/go-vite/v2/vm/contracts/abi"
 	"github.com/vitelabs/go-vite/v2/vm/contracts/dex"
-	comm "github.com/viteshan/gvite-tools/common"
+	comm "github.com/viteshan/vite_tools/gvite-tools/common"
 )
 
 var ConfigMineFlags = []cli.Flag{

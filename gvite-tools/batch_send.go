@@ -8,7 +8,7 @@ import (
 
 	"github.com/urfave/cli/v2"
 	"github.com/vitelabs/go-vite/v2/common/types"
-	comm "github.com/viteshan/gvite-tools/common"
+	comm "github.com/viteshan/vite_tools/gvite-tools/common"
 )
 
 var batchSendFlags = []cli.Flag{
