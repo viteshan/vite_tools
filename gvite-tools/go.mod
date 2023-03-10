@@ -9,6 +9,7 @@ require (
 	github.com/go-stack/stack v1.8.1 // indirect
 	github.com/kr/text v0.2.0 // indirect
 	github.com/mattn/go-isatty v0.0.14 // indirect
+	github.com/pkg/errors v0.9.1
 	github.com/shirou/gopsutil v3.21.8+incompatible // indirect
 	github.com/tklauser/go-sysconf v0.3.9 // indirect
 	github.com/tyler-smith/go-bip39 v1.1.0
